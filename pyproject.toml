@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydantic-identity"
+version = '0.0.2'
+python_requires = ">=3.12"
+description = "Pydantic BaseModel with a stable, unique identifier of its schema and validation rules."
+authors = [
+    {name = "Ryan Young", email = "dev@ryayoung.com"}
+]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/ryayoung/pydantic-identity"
+repository = "https://github.com/ryayoung/pydantic-identity"
+documentation = "https://pydantic-identity.readthedocs.io"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+    'pydantic>=2.10,<3.0',
+    'orjson>=3.10,<4.0'
+]
+
+[tool.hatch.build.targets.sdist]
+packages = ["pydantic_identity"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydantic_identity"]
